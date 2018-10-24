@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Hue",
+  "description": "An advanced color picker selection tool that you can point and click to recieve the hex code as well as RGB values",
+  "version": "1",
+  "author": "Mansi Gandhi",
+  "browser_action": {
+    "default_title": "Hue",
+    "default_icon": "Hue.png",
+    "default_popup": "newtab.html"
+  },
+  "icons": {
+    "16": "Hue.png"},
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["activeTab", "storage", "declarativeContent"],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        },
+      "description": "Opens hello.html"
+    }
+  },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+}
